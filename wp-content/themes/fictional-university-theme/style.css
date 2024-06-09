@@ -1,0 +1,21 @@
+/* 
+Theme Name: Fictional University Theme 
+Theme URI: https://wordpress.org/themes/fictional-university-theme
+Author: Md. Nuruzzaman Chowdhury
+Author URI: https://devnuru.com
+Description: Fictional University theme is a great theme for manage university, blog, custom post type etc.
+Requires at least: 6.4
+Tested up to: 6.4
+Requires PHP 7.0
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fictional_university
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featutred-images
+
+
+*/
+
+body {
+  color: green;
+}
