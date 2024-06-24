@@ -20,19 +20,20 @@ the_post();
 
    <?php
      $userNotes = new WP_Query(array(
-        'post_tpye' => 'note',
-        'posts_per_page' => 2,
-        'author' => get_current_user_id()
+        'post_type' => 'note',
+        'posts_per_page' => -1,
+        'author_id' => get_current_user_id()
      ));
 
      while ($userNotes->have_posts()) {
         $userNotes->the_post(); ?>
          
-         <li>
-            <input class="note-title-field" value="<?php echo esc_attr(get_the_title()); ?>" >
+         <li data-id="<?php the_ID(); ?>">
+            <input readonly class="note-title-field" value="<?php echo esc_attr(get_the_title()); ?>" >
             <span class="edit-note"><i class="fa fa-pencil" area-hidden="true">Edit</i></span>
              <span class="delete-note"><i class="fa fa-trash-o" area-hidden="true">Delete</i></span>
-            <textarea class="note-body-field"><?php echo esc_attr(wp_strip_all_tags(get_the_content())); ?></textarea>
+            <textarea readonly class="note-body-field"><?php echo esc_attr(wp_strip_all_tags(get_the_content())); ?></textarea>
+            <span class="update-note btn btn--blue btn--small"><i class="fa fa-arrow-right" aria-hidden="true"></i>Save</span>
          </li>
      <?php }
    
