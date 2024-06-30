@@ -8,7 +8,8 @@ import GoogleMap from "./modules/GoogleMap";
 import Search from "./modules/JsSearch";
 // import MyNotes from "./modules/MyNotes"; jquery
 import JsMyNotes from "./modules/JsMyNotes";
-import Like from "./modules/Like";
+// import Like from "./modules/Like";
+import Like from "./modules/JsLike";
 
 // Instantiate a new object using our modules/classes
 const mobileMenu = new MobileMenu();
@@ -17,4 +18,5 @@ const googleMap = new GoogleMap();
 const search = new Search();
 // const myNotes = new MyNotes();
 const myNotes = new JsMyNotes();
+// const like = new Like();
 const like = new Like();
